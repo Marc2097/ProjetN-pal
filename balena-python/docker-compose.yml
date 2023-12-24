@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  balena-hello-world:
+    build: .
+    ports:
+      - "80:80"
+    privileged: true
+    devices:
+      - "/dev:/dev"
+    cap_add:
+      - SYS_RAWIO
